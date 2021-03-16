@@ -16,7 +16,7 @@ resource "huaweicloud_compute_instance" "this" {
   name              = var.instance_name
   image_id          = data.huaweicloud_images_image.myimage.id
   flavor_id         = data.huaweicloud_compute_flavors.myflavor.ids[0]
-  security_groups   = ["default"]
+  security_groups   = var.security_groups
   availability_zone = data.huaweicloud_availability_zones.myaz.names[0]
   key_pair          = huaweicloud_compute_keypair.this.name
 

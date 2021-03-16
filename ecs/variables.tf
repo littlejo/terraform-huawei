@@ -11,3 +11,7 @@ variable subnet_id {
 variable instance_name {
   default = "basic"
 }
+
+variable security_groups {
+  default = ["default"]
+}
