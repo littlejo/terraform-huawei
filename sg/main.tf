@@ -13,3 +13,10 @@ resource "huaweicloud_networking_secgroup_rule" "this" {
   remote_ip_prefix  = "0.0.0.0/0"
   security_group_id = huaweicloud_networking_secgroup.this.id
 }
+
+resource "huaweicloud_networking_secgroup_rule" "this2" {
+  direction         = "egress"
+  ethertype         = "IPv4"
+  remote_ip_prefix  = "0.0.0.0/0"
+  security_group_id = huaweicloud_networking_secgroup.this.id
+}
