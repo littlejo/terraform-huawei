@@ -10,6 +10,7 @@ module ecs {
   source = "./ecs"
   subnet_id = module.vpc.subnet_id
   public_key = var.public_key
+  public_key_name = var.public_key_name
   security_groups = [module.ssh.name]
 }
 
@@ -37,4 +38,13 @@ module redis {
   vpc_id = module.vpc.vpc_id
   subnet_id = module.vpc.subnet_id
   az = "ap-southeast-3a"
+}
+
+module k8s {
+  source = "./cce"
+  name = "k8s-test"
+  vpc_id = module.vpc.vpc_id
+  subnet_id = module.vpc.subnet_id
+  az = "ap-southeast-3a"
+  public_key_name = var.public_key_name
 }
