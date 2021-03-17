@@ -8,9 +8,9 @@ resource "huaweicloud_networking_secgroup_rule" "this" {
   direction         = "ingress"
   ethertype         = "IPv4"
   protocol          = "tcp"
-  port_range_min    = 22
-  port_range_max    = 22
-  remote_ip_prefix  = "0.0.0.0/0"
+  port_range_min    = var.port
+  port_range_max    = var.port
+  remote_ip_prefix  = var.remote_ip_prefix
   security_group_id = huaweicloud_networking_secgroup.this.id
 }
 
