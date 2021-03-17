@@ -30,3 +30,11 @@ module rds {
   az = ["ap-southeast-3a"]
 }
 
+module redis {
+  source = "./dcs"
+  name = "dcs_test"
+  password = "Huawei_test"
+  vpc_id = module.vpc.vpc_id
+  subnet_id = module.vpc.subnet_id
+  az = "ap-southeast-3a"
+}
