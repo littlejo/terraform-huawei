@@ -17,5 +17,4 @@ resource "huaweicloud_dcs_instance" "this" {
   begin_at          = "00:00-01:00"
   period_type       = "weekly"
   backup_at         = [1]
-  whitelist_enable  = false
 }
