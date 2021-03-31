@@ -10,10 +10,9 @@ variable vpc_id {
 variable subnet_id {
 }
 
-variable az {
+variable region_ch {
 }
 
 variable flavor {
-  #default = "redis.single.xu1.tiny.128"
-  default = "redis.ha.au1.large.r2.2-h"
+  default = "redis.ha.xu1.large.r2.2-h"
 }

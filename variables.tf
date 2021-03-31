@@ -9,3 +9,7 @@ variable public_key_name {
 variable cidr {
   default = "10.0.0.0/16"
 }
+
+variable region_ch {
+  default = "可用区" # fix in the next release: https://github.com/huaweicloud/terraform-provider-huaweicloud/pull/1016
+}
