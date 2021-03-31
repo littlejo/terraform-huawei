@@ -11,9 +11,6 @@ variable vpc_id {
 variable subnet_id {
 }
 
-variable az {
-}
-
 variable flavor {
   default = "s3.large.4"
 }
