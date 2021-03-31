@@ -10,9 +10,6 @@ variable vpc_id {
 variable sg_id {
 }
 
-variable az {
-}
-
 variable password {
 }
 
@@ -21,5 +18,5 @@ variable port {
 }
 
 variable flavor {
-  default = "rds.pg.c6.large.2"
+  default = "rds.pg.c6.large.2.ha"
 }

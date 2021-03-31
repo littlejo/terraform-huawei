@@ -28,7 +28,6 @@ module rds {
   subnet_id = module.vpc.subnet_id
   vpc_id = module.vpc.vpc_id
   sg_id = module.postgres_sg.id
-  az = ["ap-southeast-3a"]
 }
 
 module redis {
