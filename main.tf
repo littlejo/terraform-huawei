@@ -46,3 +46,9 @@ module k8s {
   subnet_id = module.vpc.subnet_id
   public_key_name = var.public_key_name
 }
+
+module elb {
+  source = "./elb"
+  vip_subnet_id = module.vpc.vip_subnet_id
+  name = "k8s-elb"
+}
