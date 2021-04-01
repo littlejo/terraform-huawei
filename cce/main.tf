@@ -34,3 +34,16 @@ resource "huaweicloud_cce_node_pool" "this" {
     volumetype = "SAS"
   }
 }
+
+resource "huaweicloud_cce_addon" "this" {
+    cluster_id    = huaweicloud_cce_cluster.this.id
+    template_name = "metrics-server"
+    version       = "1.0.5"
+}
+
+# TODO
+#resource "huaweicloud_cce_addon" "autoscaler" {
+#    cluster_id    = huaweicloud_cce_cluster.this.id
+#    template_name = "autoscaler"
+#    version       = "1.17.8"
+#}
